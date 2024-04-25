@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title%}sample title{% endblock %}
+
+
+{% block Body %}
+<h1>ALL EMPloyee daetails</h1>
+    <table style="border: 3px solid black;">
+        <tr>
+            <th>Name</th>
+            <th>desgination</th>
+        </tr>
+         
+             {% for items in all_employess %}
+             <tr>
+                {% for value in items.values() %}
+                    <td>{{value}}</td>
+
+                 {% endfor %} 
+                </tr>  
+             {% endfor %}
+        
+        </tr>
+    </table>
+{% endblock %}
